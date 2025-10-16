@@ -1,0 +1,19 @@
+@use "../base/variables" as *;
+
+/*--------about--------*/
+.about-box {
+  padding: 112px 0 100px 0;
+  background-color: $sectionColor;
+}
+
+.about-title {
+  margin-bottom: 50px;
+  font-weight: 32px;
+}
+
+.description {
+  max-width: 540px;
+  margin-inline: auto;
+  text-align: center;
+  color: $textColor;
+}

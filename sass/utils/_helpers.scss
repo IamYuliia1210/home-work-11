@@ -1,0 +1,9 @@
+@use "../base/variables" as *;
+
+.description {
+  max-width: 540px;
+  color: $textColor;
+}
+.text-center{
+  text-align: center;
+}

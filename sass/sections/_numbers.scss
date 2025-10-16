@@ -1,0 +1,47 @@
+@use "../base/variables" as *;
+
+.numbers {
+  padding: 100px 0 100px 0;
+  background-color: $primaryColor;
+}
+
+.number__title {
+  visibility: hidden;
+}
+
+.numbers__container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+}
+
+.project-card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card__image {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.project-card__amount {
+  font-size: 1.3125rem;
+  font-weight: 500;
+  line-height: 1;
+  color: $accentColor;
+}
+
+.project-card__name {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.64;
+  color: $accentColor;
+}

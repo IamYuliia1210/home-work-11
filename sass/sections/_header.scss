@@ -1,0 +1,44 @@
+@use "../base/variables" as *;
+@use "../components";
+
+.header {
+  padding: 79px 0px 141px 0px;
+  background-color: $backgroundColor;
+}
+
+.header__title {
+  margin-top: 140px;
+  margin-bottom: 60px;
+}
+.header__description {
+  max-width: 540px;
+  color: $textColor;
+}
+
+.header__btn {
+  margin-top: 50px;
+}
+
+/*--------navigation--------*/
+.navigation {
+  text-transform: uppercase;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 50px;
+}
+
+.navigation__item--active .navigation__link {
+  color: $primaryColor;
+}
+
+.navigation__link {
+  color: $headingColor;
+  letter-spacing: 2px;
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: $primaryColor;
+}
