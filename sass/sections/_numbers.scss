@@ -1,4 +1,5 @@
 @use "../base/variables" as *;
+@use "../base/mixins" as *;
 
 .numbers {
   padding: 100px 0 100px 0;
@@ -44,4 +45,11 @@
   font-weight: 400;
   line-height: 1.64;
   color: $accentColor;
+}
+@include media-down(md) {
+  .numbers__container {
+    justify-content: center;
+    row-gap: 40px;
+  }
+
 }

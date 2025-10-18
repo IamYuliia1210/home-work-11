@@ -6,44 +6,44 @@
 
 
 
-@media screen and (max-width: 1200px) {
-  .container {
-    padding: 0 30px;
-  }
-}
+// @media screen and (max-width: 1200px) {
+//   .container {
+//     padding: 0 30px;
+//   }
+// }
 
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 706px;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .container {
+//     max-width: 706px;
+//   }
+// }
 
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: 537px;
-  }
-}
+// @media screen and (max-width: 576px) {
+//   .container {
+//     max-width: 537px;
+//   }
+// }
 
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 60px 0;
-  }
+// @media screen and (max-width: 768px) {
+//   .header {
+//     padding: 60px 0;
+//   }
 
-  .header__title {
-    margin-top: 70px;
-  }
+//   .header__title {
+//     margin-top: 70px;
+//   }
 
-  .navigation__list {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 25px;
-  }
+//   .navigation__list {
+//     flex-wrap: wrap;
+//     justify-content: flex-start;
+//     gap: 25px;
+//   }
 
-  .header__btn {
-    margin: 56px auto;
-  }
-}
+//   .header__btn {
+//     margin: 56px auto;
+//   }
+// }
 
 @media screen and (max-width: 576px) {
   .header {
@@ -73,16 +73,11 @@
 
 /*--------numbers--------*/
 
-@media screen and (max-width: 768px) {
-  .numbers__container {
-    justify-content: center;
-    row-gap: 40px;
-  }
-}
+
 
 @media screen and (max-width: 576px) {
   .numbers__container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 25px;
   }
@@ -111,13 +106,6 @@
   margin-bottom: 50px;
   font-weight: 32px;
   text-align: center;
-}
-
-.description {
-  max-width: 540px;
-  margin-inline: auto;
-  text-align: center;
-  color: $textColor;
 }
 
 .work__wrap {

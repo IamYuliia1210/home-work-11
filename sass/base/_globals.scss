@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "../base/mixins" as *;
+
 html {
   font-family: 'Roboto', sans-serif;
   font-size: $fontSize;
@@ -41,4 +43,10 @@ ul {
 button {
   border: none;
   cursor: pointer;
+}
+
+@include media-down(sm) {
+  html {
+  font-size: $fontSizeSm;
+}
 }

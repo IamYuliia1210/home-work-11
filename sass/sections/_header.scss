@@ -1,28 +1,39 @@
-@use "../base/variables" as *;
-@use "../components";
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use '../components';
 
 .header {
   padding: 79px 0px 141px 0px;
   background-color: $backgroundColor;
-}
 
-.header__title {
-  margin-top: 140px;
-  margin-bottom: 60px;
-}
-.header__description {
-  max-width: 540px;
-  color: $textColor;
-}
+    &__title {
+      margin-top: 140px;
+      margin-bottom: 60px;
+    }
 
-.header__btn {
-  margin-top: 50px;
+    &__description {
+      max-width: 540px;
+      color: $textColor;
+    }
+
+    &__btn {
+      margin-top: 50px;
+    }
 }
 
 /*--------navigation--------*/
 .navigation {
   text-transform: uppercase;
-}
+
+    &__hamburger {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: black;
+    }
+    &__hamburger-line {
+    }
+  }
 
 .navigation__list {
   display: flex;
@@ -41,4 +52,40 @@
 .navigation__link:hover,
 .navigation__link:focus {
   color: $primaryColor;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+@include media-down(md) {
+  .header {
+    padding: 60px 0;
+
+      &__title {
+        margin-top: 100px;
+        text-align: center;
+      }
+
+      &__description {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      &__list {
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      &__btn {
+        margin: 56px auto 0;
+      }
+  }
+
+  #hamburger-menu:checked + .navigation__hamburger + .navigation__list {
+    display: block;
+  }
 }

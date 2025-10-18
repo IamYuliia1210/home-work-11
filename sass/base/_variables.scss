@@ -5,3 +5,14 @@ $textColor: #727272;
 $accentColor: #ffffff;
 $sectionColor: #f9f9f9;
 $fontSize: 16px;
+$fontSizeSm: 14px;
+
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
