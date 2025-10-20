@@ -121,23 +121,21 @@
     &__hamburger {
       display: flex;
     }
-
   }
-
-  #hamburger-menu:checked+&__hamburger + &__list {
-    display: flex;
+  
+   #hamburger-menu:checked + .navigation__hamburger + .navigation__list {
     left: 0;
   }
 
-  #hamburger-menu:checked + &__hamburger > &__hamburger-line:nth-child(1) {
+  #hamburger-menu:checked + .navigation__hamburger .navigation__hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(8px, 10px);
   }
 
-  #hamburger-menu:checked + &__hamburger > &__hamburger-line:nth-child(2) {
+  #hamburger-menu:checked + .navigation__hamburger .navigation__hamburger-line:nth-child(2) {
     transform: scale(0);
   }
 
-  #hamburger-menu:checked + &__hamburger > &__hamburger-line:nth-child(3) {
+  #hamburger-menu:checked + .navigation__hamburger .navigation__hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(9px, -10px);
   }
 }
