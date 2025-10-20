@@ -22,10 +22,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  line-height: 1;
 }
 
 h3 {
-  font-size: 1, 3125rem;
+  font-size: 1.3125rem;
 }
 
 a {
@@ -80,7 +81,9 @@ button {
   padding: 25px 0px 17px;
   color: #ffffff;
   background-color: #34547a;
+  font-size: 1rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .header {
@@ -88,20 +91,37 @@ button {
   background-color: #eeeff1;
 }
 .header__title {
-  margin-top: 140px;
-  margin-bottom: 60px;
+  margin-top: 146px;
+  margin-bottom: 30px;
 }
 .header__description {
   max-width: 540px;
   color: #727272;
 }
 .header__btn {
-  margin-top: 50px;
+  margin-top: 56px;
 }
 
 /*--------navigation--------*/
 .navigation {
   text-transform: uppercase;
+}
+.navigation__list {
+  display: flex;
+  gap: 50px;
+}
+.navigation__item--active .navigation__link {
+  color: #34547a;
+}
+.navigation__link {
+  color: #000000;
+  letter-spacing: 2px;
+  transition: all 0.15s ease-in-out;
+}
+.navigation__link:hover, .navigation__link:focus {
+  color: #34547a;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
 }
 .navigation__hamburger {
   display: block;
@@ -109,25 +129,6 @@ button {
   height: 40px;
   background-color: black;
 }
-.navigation__list {
-  display: flex;
-  gap: 50px;
-}
-
-.navigation__item--active .navigation__link {
-  color: #34547a;
-}
-
-.navigation__link {
-  color: #000000;
-  letter-spacing: 2px;
-}
-
-.navigation__link:hover,
-.navigation__link:focus {
-  color: #34547a;
-}
-
 #hamburger-menu {
   display: none;
 }
@@ -163,28 +164,22 @@ button {
   padding: 112px 0 100px 0;
   background-color: #f9f9f9;
 }
-
-.about-title {
+.about-box__title {
   margin-bottom: 50px;
-  font-weight: 32px;
+  font-size: 32px;
+  color: #000000;
 }
-
-.description {
-  max-width: 540px;
+.about-box__description {
   margin-inline: auto;
-  text-align: center;
-  color: #727272;
 }
 
 .numbers {
-  padding: 100px 0 100px 0;
+  padding: 100px 0;
   background-color: #34547a;
 }
-
-.number__title {
+.numbers__title {
   visibility: hidden;
 }
-
 .numbers__container {
   display: flex;
   flex-wrap: wrap;
@@ -196,25 +191,21 @@ button {
 .project-card {
   display: flex;
 }
-
 .project-card__info {
   display: flex;
   flex-direction: column;
 }
-
 .project-card__image {
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
-
 .project-card__amount {
   font-size: 1.3125rem;
   font-weight: 500;
   line-height: 1;
   color: #ffffff;
 }
-
 .project-card__name {
   font-size: 1rem;
   font-weight: 400;
@@ -225,7 +216,102 @@ button {
 @media screen and (max-width: 768px) {
   .numbers__container {
     justify-content: center;
-    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .numbers__container {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+  .project-card {
+    justify-content: center;
+  }
+}
+.work {
+  padding: 100px 0 100px 0;
+}
+.work__title {
+  margin-bottom: 50px;
+  font-size: 32px;
+  color: #000000;
+}
+.work__description {
+  margin-inline: auto;
+}
+.work__wrap {
+  position: relative;
+  max-width: calc(100% - 10px);
+  margin: 50px auto 0;
+}
+.work__wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.work__imige--video {
+  display: block;
+  width: 100%;
+}
+.work__wrap--possition {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+.work__imige--btn {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .work {
+    padding: 60px 0;
+  }
+  .work__wrap--possition {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .work__wrap--possition {
+    width: 50px;
+    height: 50px;
+  }
+}
+.footer {
+  background-color: #34547a;
+}
+.footer__container {
+  padding: 50px 0;
+}
+.footer__title {
+  font-size: 21px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.footer__description {
+  font-size: 13px;
+  line-height: 1.64;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    padding: 30px 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__container {
+    padding: 30px 30px;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 576px) {
@@ -247,112 +333,4 @@ button {
     padding: 20px 0 12px;
     font-size: 0.9rem;
   }
-}
-/*--------numbers--------*/
-@media screen and (max-width: 576px) {
-  .numbers__container {
-    flex-direction: row;
-    align-items: center;
-    gap: 25px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .project-card {
-    justify-content: center;
-  }
-}
-/*--------work--------*/
-.work {
-  padding: 100px 0 100px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .work {
-    padding: 60px 0;
-  }
-}
-.work__title {
-  margin-bottom: 50px;
-  font-weight: 32px;
-  text-align: center;
-}
-
-.work__wrap {
-  position: relative;
-  max-width: calc(100% - 10px);
-  margin: 50px auto 0;
-}
-
-.work__wrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.work__imige--video {
-  display: block;
-  width: 100%;
-}
-
-.work__wrap--possition {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-}
-
-.work__imige--btn {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .work__wrap--possition {
-    width: 80px;
-    height: 80px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .work__wrap--possition {
-    width: 50px;
-    height: 50px;
-  }
-}
-/*--------footer--------*/
-.footer {
-  background-color: #34547a;
-}
-
-.footer__container {
-  padding: 50px 0 50px 0;
-}
-
-@media screen and (max-width: 768px) {
-  .footer__container {
-    padding: 30px 30px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .footer__container {
-    padding: 30px 30px;
-    text-align: center;
-  }
-}
-.footer__title {
-  font-size: 21px;
-  line-height: 1, 6;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.footer__description {
-  font-size: 13px;
-  line-height: 1, 64;
-  color: #ffffff;
 }

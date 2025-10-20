@@ -19,10 +19,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  line-height: 1;
 }
 
 h3 {
-  font-size: 1, 3125rem;
+  font-size: 1.3125rem;
 }
 
 a {
@@ -40,6 +41,7 @@ ul {
   list-style: none;
   line-height: 1.64;
 }
+
 button {
   border: none;
   cursor: pointer;
@@ -47,6 +49,6 @@ button {
 
 @include media-down(sm) {
   html {
-  font-size: $fontSizeSm;
-}
+    font-size: $fontSizeSm;
+  }
 }

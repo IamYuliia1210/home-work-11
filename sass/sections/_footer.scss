@@ -1,0 +1,40 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.footer {
+  background-color: $primaryColor;
+
+    &__container {
+      padding: 50px 0;
+    }
+
+    &__title {
+      font-size: 21px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: $accentColor;
+    }
+
+    &__description {
+      font-size: 13px;
+      line-height: 1.64;
+      color: $accentColor;
+    }
+}
+
+@include media-down(md) {
+  .footer {
+    &__container {
+      padding: 30px 30px;
+    }
+  }
+}
+
+@include media-down(sm) {
+  .footer {
+    &__container {
+      padding: 30px 30px;
+      margin: 0 auto;
+    }
+  }
+}
